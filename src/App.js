@@ -24,27 +24,6 @@ function App() {
     }
   }
 
-  // const handleKeyPress = async (e) => {
-  //   if (e.key === 'Enter') {
-  //     const data = await Fetch(city).then(() => {
-
-  //       localStorage.setItem('city', JSON.stringify(data))
-  //       setWeather(data)
-  //       setCity('')
-  //       console.log('Data from handleKeyPress in App.js : ', data);
-  //       console.log('stringify data from handle Keypress in app.js : ', JSON.stringify(data));
-
-  //     }).catch((err) => {
-
-  //       let offlineWeather = localStorage.getItem('city');
-  //       setWeather(JSON.parse(offlineWeather));
-        
-  //     })
-
-  //   }
-  // }
-
-
   return (
     <div className="main-container">
       <input

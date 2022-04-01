@@ -7,7 +7,6 @@ const Fetch = async (city) => {
 
   const data = await fetch(`${URL}?${queryParameters}`).then((res) => {
 
-    // localStorage.setItem('city', res)
     return res.json();
 
   }).catch((err) => {
@@ -18,8 +17,6 @@ const Fetch = async (city) => {
     return JSON.parse(offlineWeather)
 
   })
-
-
 
   return data;
 
