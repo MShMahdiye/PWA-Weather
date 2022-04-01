@@ -1,5 +1,5 @@
 const CACHE_NAME = 'version-1';
-const urlsToCache = ['index.html','offline.html'];
+const urlsToCache = ['index.html','offline.html','bundle.js'];
 
 const self = this;
 
@@ -11,12 +11,16 @@ self.addEventListener('install',(event) =>{
 })
 
 self.addEventListener('fetch',(event) => {
-  event.respondWith(
-    caches.match(event.request).then(() => {
-      console.log('from fetch and match !');
-      return fetch(event.request).catch(() => caches.match('offline.html'))
-    })
-  )
+  if(!navigator.onLine){
+    event.respondWith(
+      caches.match(event.request).then(() => {
+        console.log('from fetch and match !');
+        return fetch(event.request)
+        
+        //.catch(() => caches.match('offline.html'))
+      })
+    )
+  }
 })
 
 self.addEventListener('activate',

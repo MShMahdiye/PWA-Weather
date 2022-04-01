@@ -3,9 +3,10 @@
   "name": "PWA Weather App",
   "icons": [
     {
-      "src": "/Images/Fair.svg",
-      "sizes": "200x200",
-      "type": "image/x-icon/svg"
+      "src": "cloud.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ],
   "start_url": ".",
